@@ -1,0 +1,15 @@
+# This file is part of acropora. Copyright 2026 Stephan Simonis.
+# SPDX-License-Identifier: BSD-2-Clause-Patent
+name: tests
+on: [push, pull_request]
+jobs:
+  test:
+    runs-on: ubuntu-24.04
+    strategy:
+      matrix: {python-version: ["3.9", "3.10", "3.12"]}
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-python@v6
+        with: {python-version: "${{ matrix.python-version }}"}
+      - run: python -m pip install -e ".[post,dev]"
+      - run: python -m pytest tests/ -q

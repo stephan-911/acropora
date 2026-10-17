@@ -1,0 +1,30 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+.pytest_cache/
+.ruff_cache/
+
+# Virtual environments (keep these outside the repository if you can)
+venv/
+.venv/
+env/
+
+# Simulation data and analysis products: too large for version control
+data/
+data_on*/
+stats/
+centerline/
+logs/
+*.npy
+*.npz
+
+# Editor / OS
+.vscode/
+.idea/
+.DS_Store
+
+# site configuration (copy of acropora-env.example.sh)
+acropora-env.sh

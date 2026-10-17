@@ -1,0 +1,43 @@
+cff-version: 1.2.0
+message: >-
+  If you use this software, please cite both the software itself and the
+  companion paper (see preferred-citation).
+type: software
+title: "acropora: computing statistical solutions of nonlinear partial differential equations"
+abstract: >-
+  Computing statistical solutions of nonlinear partial differential
+  equations via Monte Carlo ensembles on CPU
+  (NumPy) and GPU (CuPy), with reproducible stochastic initial data.
+  First scheme: a vectorial lattice Boltzmann method for the compressible
+  Euler equations; reference application: statistical solutions of a
+  Mach 2000 astrophysical jet.
+authors:
+  - family-names: Simonis
+    given-names: Stephan
+version: 1.0.0
+date-released: "2026-10-17"
+license: BSD-2-Clause-Patent
+repository-code: "https://github.com/stephan-911/acropora"
+keywords:
+  - statistical solutions
+  - measure-valued solutions
+  - lattice Boltzmann method
+  - compressible Euler equations
+  - Monte Carlo
+  - astrophysical jets
+  - GPU computing
+preferred-citation:
+  type: article
+  title: "Computing statistical solutions of a Mach 2000 astrophysical jet"
+  authors:
+    - family-names: Simonis
+      given-names: Stephan
+    - family-names: Wissocq
+      given-names: Gauthier
+  year: 2026
+  doi: "10.48550/arXiv.2605.25282"
+  url: "https://arxiv.org/abs/2605.25282"
+  identifiers:
+    - type: other
+      value: "arXiv:2605.25282"
+      description: arXiv preprint identifier

@@ -1,0 +1,32 @@
+# This file is part of acropora. Copyright 2026 Stephan Simonis.
+# SPDX-License-Identifier: BSD-2-Clause-Patent
+#
+# Publishes to PyPI via Trusted Publishing (no API tokens) whenever a
+# GitHub release is published. One-time setup on PyPI: Your projects ->
+# acropora -> Manage -> Publishing -> add a GitHub publisher with
+# owner stephan-911, repository acropora, workflow release.yml,
+# environment pypi.
+name: release
+on:
+  release:
+    types: [published]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+      - uses: actions/setup-python@v6
+        with: {python-version: "3.12"}
+      - run: python -m pip install build && python -m build
+      - uses: actions/upload-artifact@v6
+        with: {name: dist, path: dist/}
+  publish:
+    needs: build
+    runs-on: ubuntu-latest
+    environment: pypi
+    permissions:
+      id-token: write   # required for Trusted Publishing
+    steps:
+      - uses: actions/download-artifact@v6
+        with: {name: dist, path: dist/}
+      - uses: pypa/gh-action-pypi-publish@release/v1
