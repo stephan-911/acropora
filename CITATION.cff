@@ -18,6 +18,14 @@ version: 1.0.0
 date-released: "2026-10-17"
 license: BSD-2-Clause-Patent
 repository-code: "https://github.com/stephan-911/acropora"
+doi: "10.5281/zenodo.CONCEPT"
+identifiers:
+  - type: doi
+    value: "10.5281/zenodo.23449791"
+    description: all versions of acropora (concept DOI)
+  - type: doi
+    value: "10.5281/zenodo.23449792"
+    description: acropora 1.0.0
 keywords:
   - statistical solutions
   - measure-valued solutions
@@ -41,3 +49,14 @@ preferred-citation:
     - type: other
       value: "arXiv:2605.25282"
       description: arXiv preprint identifier
+references:
+  - type: data
+    title: >-
+      Monte Carlo ensemble data for "Computing statistical solutions of a
+      Mach 2000 astrophysical jet"
+    authors:
+      - family-names: Simonis
+        given-names: Stephan
+    year: 2026
+    doi: "10.5281/zenodo.23415318"
+    url: "https://doi.org/10.5281/zenodo.23415318"
